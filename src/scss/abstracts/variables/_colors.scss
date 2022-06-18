@@ -1,0 +1,65 @@
+// ******** Colors ********
+$white: #fff !default;
+$black: #000 !default;
+$blue: #007bff !default;
+$purple: #7d73a5 !default;
+$pink: #e83e8c !default;
+$red: #d13449 !default;
+$orange: #feab55 !default;
+$yellow: #ffc107 !default;
+$green: #009568 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$dark: #101420 !default;
+$sky: #87ceeb !default;
+$light-sky: #f7faff !default;
+$light-orange: #fef3ef !default;
+$light-green: #eaf4ef !default;
+
+// ********* Theme *********
+$primary: $green !default;
+$secondary: #e9e8e8 !default;
+$success: #01b95dda !default;
+$info: $cyan !default;
+$warning: $orange !default;
+$danger: $red !default;
+$dark: $dark !default;
+$primary-bg: $light-sky !default;
+
+// ********* Color Palette *********
+$colors: () !default;
+$theme-colors: () !default;
+
+$colors: map-merge(
+    (
+        "blue": $blue,
+        "purple": $purple,
+        "pink": $pink,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $cyan,
+        "white": $white,
+        "gray": lightgray,
+        "gray-dark": gray,
+    ),
+    $colors
+);
+$theme-colors: map-merge(
+    (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "dark": $dark,
+        "light": $light-sky,
+    ),
+    $theme-colors
+);
+
+// ********* Shadow *********
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;

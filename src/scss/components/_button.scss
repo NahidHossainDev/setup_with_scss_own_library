@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+@mixin btn($bg-color: $primary) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+    font-weight: $font-weight-semi-bold;
+}
+
+.btn {
+    @include btn;
+}
+
+@each $key, $val in $theme-colors {
+    .btn-#{$key} {
+        @include btn($val);
+        @if ($key != "light") {
+            color: $white;
+        }
+        &:hover {
+            background-color: lighten($val, 5);
+        }
+    }
+    .btn-outlined-#{$key} {
+        @include btn(#fff);
+        color: $val;
+        &:hover {
+            background-color: $val;
+            @if ($key != "light") {
+                color: $white;
+            }
+        }
+    }
+}

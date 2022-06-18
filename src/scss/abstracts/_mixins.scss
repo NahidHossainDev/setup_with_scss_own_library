@@ -1,0 +1,25 @@
+// --- START media query functionality
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+    $max: map-get($breakpoints, $name);
+    @return if($max != 0, $max, null);
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+    @if $max {
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+$grid-breakpoints: (
+    tab: 768px,
+    l-tab: 992px,
+    w-tab: 1080px,
+    laptop: 1280px,
+    desktop: 1366px,
+) !default;
+// --- END media query functionality

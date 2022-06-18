@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow;
+
+    .card-title {
+        font-size: $font-size-lg;
+        padding-bottom: $base-padding;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: $base-font-size;
+    }
+}

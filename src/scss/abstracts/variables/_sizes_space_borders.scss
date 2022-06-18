@@ -1,0 +1,28 @@
+// ********* Size *********
+$sm: 0.75rem !default;
+$md: 1rem !default;
+$lg: 1.25rem !default;
+$xl: 1.5rem !default;
+$xxl: 2rem !default;
+
+$sizes: () !default;
+$sizes: map-merge(
+    (
+        "sm": $sm,
+        "md": $md,
+        "lg": $lg,
+        "xl": $xl,
+        "xxl": $xxl,
+    ),
+    $sizes
+);
+
+// ********* Spacing *********
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// ********* Borders *********
+$base-border-thickness: 1px !default;
+
+// ********* Borders Radius *********
+$base-border-radius: 1rem !default;
