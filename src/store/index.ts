@@ -14,4 +14,3 @@ export default store;
 
 export type AppStore = ReturnType<typeof makeStore>;
 export type AppState = ReturnType<AppStore["getState"]>;
-// export type AppThunk<R> = ThunkAction<R, AppState, unknown, AnyAction>;
